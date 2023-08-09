@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@types/node@^20.4.9":
+  version "20.4.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.9.tgz#c7164e0f8d3f12dfae336af0b1f7fdec8c6b204f"
+  integrity sha512-8e2HYcg7ohnTUbHk8focoklEQYvemQmu9M/f43DZVx43kHn0tE3BY/6gSDxS7k0SprtS0NHvj+L80cGLnoOUcQ==
+
 available-typed-arrays@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
@@ -44,6 +49,11 @@ call-bind@^1.0.2:
   dependencies:
     function-bind "^1.1.1"
     get-intrinsic "^1.0.2"
+
+dotenv@^16.3.1:
+  version "16.3.1"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.3.1.tgz#369034de7d7e5b120972693352a3bf112172cc3e"
+  integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
 
 events@1.1.1:
   version "1.1.1"
@@ -174,6 +184,11 @@ sax@>=0.6.0:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
+
+typescript@^5.1.6:
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.1.6.tgz#02f8ac202b6dad2c0dd5e0913745b47a37998274"
+  integrity sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==
 
 url@0.10.3:
   version "0.10.3"
