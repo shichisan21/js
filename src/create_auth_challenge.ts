@@ -20,6 +20,8 @@ const handler = async (event: any) => {
   event.response.publicChallengeParameters = {
     EMAIL: event.request.userAttributes.email, // 公開パラメーターにはEメールを含める
   };
+  console.log("event check", event);
+
   event.response.privateChallengeParameters = { answer: otp }; // 私有パラメーターには正しいOTPを含める
   event.response.challengeMetadata = "CUSTOM_CHALLENGE";
 
