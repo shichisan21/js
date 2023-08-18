@@ -5,6 +5,8 @@ dotenv.config();
 const ses = new AWS.SES({ region: "ap-northeast-1" });
 
 const handler = async (event: any) => {
+  console.log("incoming event", event);
+
   // カスタムチャレンジが必要でない場合、そのままイベントを返す
   if (event.request.challengeName !== "CUSTOM_CHALLENGE") {
     return event;
