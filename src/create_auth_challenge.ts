@@ -22,11 +22,11 @@ const handler = async (event: any) => {
   event.response.publicChallengeParameters = {
     EMAIL: event.request.userAttributes.email, // 公開パラメーターにはEメールを含める
   };
-  console.log("event check", event);
 
   event.response.privateChallengeParameters = { answer: otp }; // 私有パラメーターには正しいOTPを含める
   event.response.challengeMetadata = "CUSTOM_CHALLENGE";
 
+  console.log(event);
   return event;
 };
 
@@ -53,6 +53,7 @@ async function sendOtpToUser(email: string, otp: string) {
     throw new Error("Sender email is undefined");
   }
 
+  console.log("Email parameter", params);
   return ses.sendEmail(params).promise();
 }
 

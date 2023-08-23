@@ -8,7 +8,7 @@ const handler = async (event: any) => {
     event.response.issueTokens = false;
     event.response.failAuthentication = false;
     event.response.challengeName = "PASSWORD_VERIFIER";
-    console.log("PASSWORD_VERIFIER");
+    console.log("SRP_A");
   }
   // パスワードが正しい場合、カスタムチャレンジ (OTP) へ移行
   else if (
@@ -19,7 +19,7 @@ const handler = async (event: any) => {
     event.response.issueTokens = false;
     event.response.failAuthentication = false;
     event.response.challengeName = "CUSTOM_CHALLENGE";
-    console.log("CUSTOM_CHALLENGE");
+    console.log("PASSWORD_VERIFIER");
   }
   // OTPが正しい場合、トークンを発行
   else if (
@@ -29,7 +29,7 @@ const handler = async (event: any) => {
   ) {
     event.response.issueTokens = true;
     event.response.failAuthentication = false;
-    console.log("NO3");
+    console.log("CUSTOM_CHALLENGE");
   }
   // OTPが正しくない場合、再度チャレンジ
   else if (
