@@ -17,6 +17,7 @@ export const handler = async (
 
   // ChatGPTに問い合わせる
   const response = await queryChatGPT(inputText);
+  console.log("レスポンス", response);
 
   return {
     statusCode: 200,
@@ -25,9 +26,8 @@ export const handler = async (
 };
 
 const queryChatGPT = async (text: string) => {
-  // OpenAIのエンドポイントとAPIキーをセットアップする必要があります
   const ENDPOINT = "https://api.openai.com/v2/engines/davinci/completions";
-  const API_KEY = "YOUR_OPENAI_API_KEY"; // 実際のキーを使用してください
+  const API_KEY = process.env.OAI_GPT_KEY;
 
   return await axios.post(
     ENDPOINT,
